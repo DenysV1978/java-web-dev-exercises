@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class AreaOfRectangle {
     public static void main(String[] args) {
-        int side;
+        float length;
+        float width;
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Hello. What is the size of your rectangular (input only integer)?");
-        side = input.nextInt();
+        System.out.println("Hello. What is the length of your rectangular?");
+        length = input.nextFloat();
+        System.out.println("Hello. What is the width of your rectangular?");
+        width = input.nextFloat();
         input.close();
 
-        int area = side*side;
+        float area = length*width;
 
         System.out.println("The area of your rectangular is " +area);
 
