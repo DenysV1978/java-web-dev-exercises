@@ -7,7 +7,7 @@ public class Area {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Input the radius of your circle:");
-        double radius = input.nextFloat();
+        double radius = input.nextDouble();
         input.close();
 
         double areaCalculated = Circle.getArea(radius);
