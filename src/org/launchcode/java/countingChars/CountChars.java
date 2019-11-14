@@ -11,7 +11,13 @@ public class CountChars {
     public static void main(String[] args) {
 
         //create String to count Chars;
-        String searchString = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter your string: ");
+        String searchString =  input.nextLine();
+
+        searchString = searchString.toLowerCase();
+
+        //String searchString = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
         //create HasMap variable
         HashMap<String, Integer> result = new HashMap<>();
         // convert String to Array of chars
@@ -42,6 +48,12 @@ public class CountChars {
             }
 
             finalResult.put(entry, sum);
+        }
+
+        //part where it will be printed out
+
+        for(Map.Entry<String, Integer> printOut : finalResult.entrySet()) {
+            System.out.println(printOut.getKey() + ": " + printOut.getValue());
         }
 
 
