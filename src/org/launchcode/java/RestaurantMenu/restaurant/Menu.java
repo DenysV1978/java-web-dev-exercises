@@ -25,13 +25,17 @@ public class Menu {
 
     public void getItems2() {
 
+        String[] itemList;
+
         for (Map.Entry<Integer, MenuItem> item : this.menuList.entrySet()) {
 
             System.out.println(item.getValue().getMenuItemName() + "\t" + item.getValue().getMenuItemCategory());
-        }
-        ;
+        };
 
-    }
+
+    };
+
+
 
 
 
