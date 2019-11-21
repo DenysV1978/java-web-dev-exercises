@@ -50,7 +50,14 @@ public class Student {
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
-    }
+        double newQualityScore = grade * courseCredits;
+        double oldQualityScore = this.gpa * this.numberOfCredits;
+        double newTotalQualityScore = newQualityScore + oldQualityScore;
+        this.numberOfCredits = this.numberOfCredits + courseCredits;
+        this.gpa = newTotalQualityScore / this.numberOfCredits;
+    };
+
+
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
@@ -93,11 +100,16 @@ public class Student {
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
         System.out.println("The Student class works! " + sally.getName() + " is a student!");
-        System.out.println(sally);
+        System.out.println(" Sally`s old GPA is: " + sally.getGpa());
+        System.out.println("Sally`s number of credits received: " + sally.getNumberOfCredits());
         sally.addGrade(12, 3.5);
-        System.out.println(sally);
+        //System.out.println(sally);
         sally.addGrade(25, 3.8);
-        System.out.println(sally);
+
+        System.out.println("Sally`s new GPA: " + sally.getGpa());
+        System.out.println("Sally`s number of credits received: " + sally.getNumberOfCredits());
+        //System.out.println(sally);
+
         System.out.println("Sally is " + sally.getGradeLevel() + ".");
     }
 }
