@@ -30,7 +30,20 @@ public class Student {
 
 
      //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
+    public String getGradeLevel() {
+        String gradeLevel;
+        if(this.numberOfCredits<=30) {
+            gradeLevel = "Freshman";
+        } else if(this.numberOfCredits>30 && this.numberOfCredits<=59) {
+            gradeLevel = "Sophmore";
+        } else if(this.numberOfCredits>60 && this.numberOfCredits<=89) {
+            gradeLevel = "Junior";
+        } else {
+            gradeLevel = "Senior";
+        }
+        return gradeLevel;
+    };
+
 //        // Determine the grade level of the student based on numberOfCredits
 //    }
 
@@ -85,5 +98,6 @@ public class Student {
         System.out.println(sally);
         sally.addGrade(25, 3.8);
         System.out.println(sally);
+        System.out.println("Sally is " + sally.getGradeLevel() + ".");
     }
 }

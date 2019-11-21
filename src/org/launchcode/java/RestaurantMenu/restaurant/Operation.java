@@ -19,7 +19,7 @@ public class Operation {
         menuNovember.getItems();
         menuNovember.getItems2();
 
-
+        menuNovember.Menu(1, new MenuItem());
 
 
 
