@@ -14,6 +14,26 @@ public class Menu {
 
     };
 
+    public void removeMenuItem(String menuItemName) {
+
+        for(Map.Entry<Integer, MenuItem> item : this.menuList.entrySet()) {
+
+            String itemToBeDeleted;
+            MenuItem menuItemSearched = new MenuItem();
+            menuItemSearched = item.getValue();
+
+            itemToBeDeleted = menuItemSearched.getMenuItemName();
+
+            if(menuItemName == itemToBeDeleted) {
+                Object key;
+                key = item.getKey();
+                this.menuList.remove(key);
+
+            }
+        };
+
+    };
+
     public void getItems() {
 
         for(MenuItem item : this.menuList.values()) {
@@ -25,7 +45,7 @@ public class Menu {
 
     public void getItems2() {
 
-        String[] itemList;
+
 
         for (Map.Entry<Integer, MenuItem> item : this.menuList.entrySet()) {
 

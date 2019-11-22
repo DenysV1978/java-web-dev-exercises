@@ -16,10 +16,16 @@ public class Operation {
         menuNovember.Menu(1, menuItem1);
         menuNovember.Menu(2,menuItem2);
 
-        menuNovember.getItems();
+        //menuNovember.getItems();
         menuNovember.getItems2();
 
-        menuNovember.Menu(1, new MenuItem());
+        //menuNovember.remove(1)
+
+        menuNovember.removeMenuItem("Potato soup");
+
+        menuNovember.getItems2();
+
+        //menuNovember.Menu(1, new MenuItem());
 
 
 
