@@ -27,6 +27,17 @@ public class Operation {
 
         //menuNovember.Menu(1, new MenuItem());
 
+        menuNovember.checkIfMenuItemIsNew("Tomato soup");
+        menuNovember.checkIfMenuItemIsNew("Potato soup");
+
+        MenuItem menuItem3 = new MenuItem();
+        menuItem3.MenuItem("Shripms fried", "shripms fried", "dry food", 20.5, false, "1/1/2015");
+        menuNovember.Menu(3,menuItem3);
+
+        menuNovember.getItems();
+        //menuNovember.checkIfMenuItemIsNew("Shrimps fried");
+
+
 
 
         System.out.println("Stop");

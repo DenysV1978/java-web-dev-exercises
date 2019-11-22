@@ -55,6 +55,33 @@ public class Menu {
 
     };
 
+    public void checkIfMenuItemIsNew(String menuItemName) {
+
+
+
+        for(Map.Entry<Integer, MenuItem> item : this.menuList.entrySet()) {
+
+            MenuItem menuItemToBeSearched = new MenuItem();
+            menuItemToBeSearched = item.getValue();
+
+            String menuItemToBeChecked = menuItemToBeSearched.getMenuItemName();
+
+
+            if(menuItemName == menuItemToBeChecked) {
+                if(menuItemToBeSearched.getMenuItemIsNew()) {
+                    System.out.println(menuItemName + " is new item in the menu list.");
+                } else {
+                    System.out.println(menuItemName + " is NOT new item in the menu list.");
+                };
+
+
+
+            } else {
+                System.out.println("This item is not in the menu list");
+            }
+        }
+    }
+
 
 
 
