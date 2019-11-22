@@ -80,6 +80,31 @@ public class Menu {
                 System.out.println("This item is not in the menu list");
             }
         }
+    };
+
+    public String findWhenMenuWasUpdated() {
+
+        Integer lastKeyNumber = 0;
+
+        for(Map.Entry<Integer, MenuItem> item : this.menuList.entrySet()) {
+
+            if(item.getKey()>lastKeyNumber) {
+                lastKeyNumber = item.getKey();
+            }
+        };
+        MenuItem lastInputMenuItem = new MenuItem();
+        lastInputMenuItem = this.menuList.get(lastKeyNumber);
+        String dateOfTheLastUpdate;
+
+        // fun stuff here. When IntelliJ created getters for MenuItem it assigned getUpdateOfMenuItem() as Object. So, because of this
+        // I experienced error until I casted Object in String. The same way I could just fix it at getter (just change Object on String and its gonna work!!!!!!
+        dateOfTheLastUpdate = (String) lastInputMenuItem.getUpdateOfMenuItem();
+        //System.out.println("Stop");
+
+        return dateOfTheLastUpdate;
+
+
+
     }
 
 

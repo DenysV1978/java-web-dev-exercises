@@ -37,6 +37,8 @@ public class Operation {
         menuNovember.getItems();
         //menuNovember.checkIfMenuItemIsNew("Shrimps fried");
 
+        System.out.println("The last update of this menu was: " + menuNovember.findWhenMenuWasUpdated() + ".");
+
 
 
 
