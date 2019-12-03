@@ -4,8 +4,12 @@ public class HouseCat extends Cat {
     private String name;
     private String species = "Felis catus";
 
-    public HouseCat(String aName, double aWeight) {
+    public HouseCat(double aWeight) {
         super(aWeight);
+
+    }
+
+    public HouseCat(String aName) {
         name = aName;
     }
 
