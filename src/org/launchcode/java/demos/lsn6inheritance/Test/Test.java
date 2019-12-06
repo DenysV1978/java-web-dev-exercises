@@ -11,6 +11,6 @@ public class Test {
     @org.junit.Test
     public void checkIfLapTopChildOfComputer() {
         LapTop lapTop5 = new LapTop();
-        assertEquals("normal", lapTop5.getSize());
+        assertEquals("normal", lapTop5.getSize() );
     }
 }

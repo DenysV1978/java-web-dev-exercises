@@ -37,6 +37,11 @@ public abstract class Ingredient {
         this.allergens = allergens;
     }
 
+
+
+    ;
+
+
     @Override
     public String toString() {
         return "Name: " + name + "\n" +
